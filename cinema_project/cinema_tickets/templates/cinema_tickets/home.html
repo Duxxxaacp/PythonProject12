@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кинотеатр - Главная</title>
+</head>
+<body>
+    <h1>{{ welcome_message }}</h1>
+    <p>Это главная страница приложения для продажи билетов.</p>
+    <p>Доступные разделы:</p>
+    <ul>
+        <li><a href="{% url 'admin:index' %}">Административная панель</a></li>
+        <!-- Сюда можно добавить ссылки на список фильмов или другие страницы -->
+        <li>Пример URL для покупки (используйте POST): <code>{% url 'cinema_tickets:purchase_ticket' %}</code></li>
+        <li>Пример URL для получения PDF (замените 1 на ID билета): <code>/api/tickets/1/pdf/</code></li>
+    </ul>
+</body>
+</html>
